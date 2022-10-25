@@ -25,6 +25,9 @@ const promedio = () => {
     let sum = 0;
     const inputs = document.querySelectorAll('input[class="input_promediations"]'); // get all inputs
     inputs.forEach((input) => {
+        if(input.value === ''){
+            input.value = '0';
+        }
         sum += parseInt(input.value);
     })
     const promedio = sum / inputs.length;
