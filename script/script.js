@@ -16,7 +16,7 @@ const send_evaluations = (e) => {
         button.type = 'button';
         button.value = 'Calcular';
         button.name = 'button_calculate';
-        button.className = 'mx-3 btn btn-primary'; // add class to button
+        button.className = 'btn w-32 bg-lime-500 text-white p-3 mx-3 rounded-full'; // add class to button
         button.onclick = promedio; // add function to button
         promediations.appendChild(button); // add text to button
 
@@ -24,7 +24,7 @@ const send_evaluations = (e) => {
         clearButton.type = 'button';
         clearButton.value = 'Limpiar';
         clearButton.name = 'button_clear';
-        clearButton.className = 'mx-3 btn btn-primary'; // add class to button
+        clearButton.className = 'btn w-32 bg-red-500 text-white p-3 mx-3 rounded-full'; // add class to button
         clearButton.onclick = clear; // add function to button
         promediations.appendChild(clearButton); // add text to button
     }
