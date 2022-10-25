@@ -16,9 +16,23 @@ const send_evaluations = (e) => {
         button.type = 'button';
         button.value = 'Calcular';
         button.name = 'button_calculate';
+        button.className = 'mx-3 btn btn-primary'; // add class to button
         button.onclick = promedio; // add function to button
         promediations.appendChild(button); // add text to button
+
+        const clearButton = document.createElement("input");
+        clearButton.type = 'button';
+        clearButton.value = 'Limpiar';
+        clearButton.name = 'button_clear';
+        clearButton.className = 'mx-3 btn btn-primary'; // add class to button
+        clearButton.onclick = clear; // add function to button
+        promediations.appendChild(clearButton); // add text to button
     }
+}
+
+const clear = () => {
+    promediations.innerHTML = '';
+    resultaition.innerHTML = '';
 }
 
 const promedio = () => {
@@ -34,7 +48,8 @@ const promedio = () => {
     //create element
     const p = document.createElement("p"); // create p
     p.innerHTML = `El promedio es: ${promedio}`; // add text to p
-    promediations.appendChild(p);
+    resultaition.innerHTML = '';
+    resultaition.appendChild(p);
 }
 
 const button_evaluations = document.querySelector('#evaluations_send');
